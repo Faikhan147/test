@@ -29,6 +29,6 @@ resource "aws_kms_key" "this" {
   })
 
   tags = {
-    Name = "${var.environment}-kms-key"
+    Name = "${var.env}-kms-key"
   }
 }
