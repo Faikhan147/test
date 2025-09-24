@@ -1,6 +1,6 @@
 resource "aws_security_group" "this" {
-  name        = "${var.environment}-sg"
-  description = "${var.environment}-sg"
+  name        = "${var.env}-sg"
+  description = "${var.env}-sg"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -18,6 +18,6 @@ resource "aws_security_group" "this" {
   }
 
   tags = {
-    Name = "${var.environment}-sg"
+    Name = "${var.env}-sg"
   }
 }
