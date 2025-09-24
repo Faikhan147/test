@@ -1,6 +1,6 @@
 resource "aws_kms_key" "this" {
   deletion_window_in_days = 10
-  description             = "${var.environment}-kms-key"
+  description             = "${var.env}-kms-key"
   vpc_id      = var.vpc_id
 
   policy = jsonencode({
