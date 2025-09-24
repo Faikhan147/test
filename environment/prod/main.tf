@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "ap-south-1"
-}
-
 module "kms" {
   source      = "../../modules/kms"
   environment = "prod"
