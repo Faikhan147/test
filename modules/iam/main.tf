@@ -1,7 +1,3 @@
-variable "environment" {
-  type = string
-}
-
 # Cluster Role
 resource "aws_iam_role" "cluster_role" {
   name = "${var.environment}-eks-cluster-role"
