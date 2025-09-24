@@ -1,6 +1,6 @@
 # Cluster Role
 resource "aws_iam_role" "cluster_role" {
-  name = "${var.environment}-eks-cluster-role"
+  name = "${var.env}-eks-cluster-role"
   vpc_id      = var.vpc_id
 
   assume_role_policy = jsonencode({
@@ -24,7 +24,7 @@ resource "aws_iam_role" "cluster_role" {
 
 # Node Role
 resource "aws_iam_role" "node_role" {
-  name = "${var.environment}-eks-node-role"
+  name = "${var.env}-eks-node-role"
   vpc_id      = var.vpc_id
 
   assume_role_policy = jsonencode({
