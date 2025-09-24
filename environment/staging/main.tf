@@ -1,19 +1,17 @@
-provider "aws" {
-  region = "ap-south-1"
-}
-
 module "kms" {
   source      = "../../modules/kms"
-  environment = "staging"
+  environment = var.env
+  vpc_id      = var.vpc_id
 }
 
 module "iam" {
   source      = "../../modules/iam"
-  environment = "staging"
+  environment = var.env
+  vpc_id      = var.vpc_id
 }
 
 module "sg" {
   source      = "../../modules/security-group"
-  environment = "staging"
+  environment = var.env
   vpc_id      = var.vpc_id
 }
