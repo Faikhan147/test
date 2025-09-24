@@ -1,11 +1,3 @@
-variable "environment" {
-  type = string
-}
-
-variable "vpc_id" {
-  type = string
-}
-
 resource "aws_security_group" "this" {
   name        = "${var.environment}-sg"
   description = "${var.environment}-sg"
