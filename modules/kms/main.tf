@@ -1,7 +1,3 @@
-variable "environment" {
-  type = string
-}
-
 resource "aws_kms_key" "this" {
   description             = "${var.environment}-kms-key"
   deletion_window_in_days = 10
