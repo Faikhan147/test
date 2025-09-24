@@ -31,3 +31,9 @@ resource "aws_kms_key" "this" {
     Name = "${var.env}-kms-key"
   }
 }
+
+# Add alias
+resource "aws_kms_alias" "this" {
+  name          = "alias/${var.env}-kms-key"
+  target_key_id = aws_kms_key.this.id
+}
