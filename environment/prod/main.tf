@@ -1,6 +1,6 @@
 module "kms" {
   source      = "../../modules/kms"
-  environment = var.env
+  env     = var.env
   vpc_id      = var.vpc_id
 }
 
