@@ -24,9 +24,6 @@ resource "aws_iam_role" "cluster_role" {
   ]
 }
 
-output "cluster_role_arn" {
-  value = aws_iam_role.cluster_role.arn
-}
 
 # Node Role
 resource "aws_iam_role" "node_role" {
@@ -49,8 +46,4 @@ resource "aws_iam_role" "node_role" {
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
     "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
   ]
-}
-
-output "node_role_arn" {
-  value = aws_iam_role.node_role.arn
 }
