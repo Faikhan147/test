@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 envs=("prod" "staging" "qa")
