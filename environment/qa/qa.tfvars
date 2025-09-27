@@ -1,3 +1,3 @@
-vpc_id = "vpc-0d5948ab6a3fda64a"
+vpc_id = "vpc-00583c6394aac61af"
 env = "qa"
 region = "us-east-1"
