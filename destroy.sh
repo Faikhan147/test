@@ -32,6 +32,9 @@ for env in "${envs[@]}"; do
       echo "💣 Destroying resources in $env..."
       terraform destroy -auto-approve
 
+      # Inform about KMS behavior
+      echo "🔒 KMS keys will be disabled and scheduled for deletion (7 days)."
+
       echo "📊 Showing the state after destroy..."
       terraform show
   else
