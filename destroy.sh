@@ -34,7 +34,7 @@ for env in "${envs[@]}"; do
       terraform destroy -var-file="$tfvars_file" -auto-approve
 
       # Inform about KMS behavior
-      echo "🔒 KMS keys will be disabled and scheduled for deletion (30 days)."
+      echo "🔒 KMS keys will be disabled and scheduled for deletion (10 days)."
 
       echo "📊 Showing the state after destroy..."
       terraform show
