@@ -17,6 +17,6 @@ output "kms_key_arn" {
 
 # Security Group outputs
 output "sg_id" {
-  value       = module.security-group.sg_id
+  value       = module.sg.sg_id
   description = "ID of the security group"
 }
