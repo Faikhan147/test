@@ -29,11 +29,12 @@ for env in "${envs[@]}"; do
   read choice
 
   if [ "$choice" == "yes" ]; then
-      echo "💣 Destroying resources in $env..."
-      terraform destroy -auto-approve
+      tfvars_file="${env}.tfvars"
+      echo "💣 Destroying resources in $env using $tfvars_file..."
+      terraform destroy -var-file="$tfvars_file" -auto-approve
 
       # Inform about KMS behavior
-      echo "🔒 KMS keys will be disabled and scheduled for deletion (10 days)."
+      echo "🔒 KMS keys will be disabled and scheduled for deletion (30 days)."
 
       echo "📊 Showing the state after destroy..."
       terraform show
