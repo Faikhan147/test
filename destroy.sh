@@ -6,10 +6,6 @@ for env in "${envs[@]}"; do
   echo "📦 Switching to $env environment directory..."
   cd "./environment/$env" || exit 1
 
-  # Terraform workspace (optional, safe)
-  echo "📦 Switching to $env workspace..."
-  terraform workspace select "$env" || terraform workspace new "$env"
-
   # Terraform init
   echo "🔍 Initializing Terraform..."
   terraform init -reconfigure
